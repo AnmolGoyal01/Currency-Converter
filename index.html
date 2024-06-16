@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-[#a3b18a]">
+    <main class="h-[90vh] w-[80vw] md:w-[600px] lg:w-[800px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl">
+        <form class="flex flex-col justify-start items-center h-full w-full p-5 bg-[#fefae0] rounded-2xl">
+            <h1 class="p-2 text-2xl uppercase font-bold">currency converter</h1>
+            <div class="line w-[95%] boinrder-zinc-400 border-[1px]"></div>
+            <div class="amount w-full py-3 mt-4">
+                <h4 class="font-bolder text-lg px-2">Enter Amount</h4>
+                <input type="text" class="p-2 rounded-lg border w-full" placeholder="Enter amount in INR">
+            </div>
+            <div id="dropDown" class="countries md:flex-row flex flex-col w-full items-center">
+                <div  class="from p-4 w-full flex justify-center items-center gap-5">
+                    <img id="fromCountry" class="w-10 h-10 overflow-hidden object-contain" src="https://flagsapi.com/US/flat/64.png">
+                    <select class="w-[80%] bg-[#cfe1b9] p-4 rounded-xl" name="fromCountry">
+                    </select>
+                </div>
+                <i class="md:rotate-0 rotate-90 fa-solid fa-arrow-right-arrow-left"></i>
+                <div class="to p-4 w-full flex justify-center items-center gap-5">
+                    <img id="toCountry" class="w-10 h-10 overflow-hidden object-contain" src="https://flagsapi.com/IN/flat/64.png">
+                    <select class="w-[80%] bg-[#cfe1b9] p-4 rounded-xl" name="toCountry">
+                    </select>
+                </div>
+                </div>
+                    <div id="outputBox" class="result w-[90%] m-9 p-4 rounded-xl bg-white">
+                        1 USD = 80 INR
+                    </div>
+            <button class="getExchRate absolute bottom-3 w-[90%] bg-[#283618] text-white rounded-xl p-2 ">Get Exchange Rate</button>
+        </form>
+    </main>
+    <script src="codes.js"></script>
+    <script src="app.js"></script>
+</body
+</html>
